@@ -39,7 +39,7 @@ def ticket_promedio_de_compra(montos, funnel):
     :param funnel: Array con el estado del funnel para identificar compradores
     '''
     montos_compradores = montos[funnel == 3]
-    promedio_monto_gastado = montos_compradores.sum() / (montos_compradores).size
+    promedio_monto_gastado = montos_compradores.mean()
     return promedio_monto_gastado
 
 def cantidad_compras_no_concretadas(funnel):
